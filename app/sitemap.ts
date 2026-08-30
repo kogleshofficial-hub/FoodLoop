@@ -1,2 +1,14 @@
 import type { MetadataRoute } from 'next';
-export default function sitemap(): MetadataRoute.Sitemap { const base=process.env.NEXT_PUBLIC_SITE_URL||'https://food-loop.vercel.app'; return [{url:base,lastModified:new Date(),changeFrequency:'daily',priority:1}]; }
+
+const baseUrl = 'https://food-loop-app.vercel.app';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+  ];
+}
