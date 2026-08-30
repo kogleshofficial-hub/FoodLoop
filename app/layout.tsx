@@ -13,8 +13,11 @@ export const metadata: Metadata = {
     siteName: 'FoodLoop',
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: '98cIgvnYkjcVprw22odG8Py81hWECWSy11ZOUrHuDUM',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><head><meta name="google-site-verification" content="98cIgvnYkjcVprw22odG8Py81hWECWSy11ZOUrHuDUM" /></head><body>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
