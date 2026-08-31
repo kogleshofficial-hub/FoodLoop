@@ -1,114 +1,96 @@
-# FoodLoop 🌍🍱
+# FoodLoop 🍱
 
-### Rescue surplus food. Reduce waste.
+> **Rescue surplus food. Reduce waste.**
 
-FoodLoop is a real-world food-rescue web app designed to connect people with surplus food that would otherwise go to waste.
+FoodLoop is a web application exploring a simple idea: make it easier for surplus food to reach people who can use it instead of becoming waste.
 
-Donors can publish available food, while other users can discover listings and request a pickup. Donors stay in control of who can collect their food.
+## 🚀 Live app
 
-## 🚀 Live Demo
+**https://food-loop-app.vercel.app/**
 
-**👉 https://food-loop-app.vercel.app/**
+## The problem
 
-Try the live app and see FoodLoop in action.
+Usable food can become waste simply because there is no convenient way to let someone nearby know it is available.
 
----
+FoodLoop turns that problem into a practical product workflow: publish surplus food, discover available listings, and request a pickup.
 
-## 💡 Why I Built This
+## 🔄 How it works
 
-Food waste is a real-world problem, and I wanted to build something practical around it.
+```text
+Surplus food available
+        ↓
+Donor creates listing
+        ↓
+People discover it
+        ↓
+Someone requests pickup
+        ↓
+Donor accepts or declines
+```
 
-Instead of keeping the idea as just an idea, I turned it into a working web application with real accounts, real data, food listings, and request handling.
-
-FoodLoop is still an evolving MVP, but the goal is simple:
-
-**Make it easier for surplus food to reach people who can use it instead of becoming waste.**
-
----
-
-## ✨ What FoodLoop Does
+## ✨ Features
 
 - 🔎 Discover available surplus food
-- 📍 Browse food by location
+- 📍 Browse listings by location
 - 🍱 Publish surplus food with pickup details
 - 🙋 Request food from another user
 - ✅ Donors can accept or decline requests
-- 🗑️ Donors can delete their own listings
-- 🔐 Supabase Authentication
+- 🗑️ Owners can manage their own listings
+- 🔐 Authentication with Supabase
 - 🛡️ Row Level Security
-- 📱 Responsive experience for mobile and desktop
+- 📱 Responsive interface
 
----
+## 🧠 Built as a real application
 
-## 🔐 Built Around Real Data
+FoodLoop is more than a static landing page. Accounts, listings, and requests are backed by a real database and protected by access rules.
 
-FoodLoop isn't just a static demo.
+The project is intentionally an evolving MVP. The hard part is not only building the software — it is figuring out how a food-rescue system could work safely and practically in real communities.
 
-Listings, accounts, and requests are stored using Supabase.
+## 🛠️ Tech stack
 
-Security rules help prevent users from managing data they do not own, and users cannot request their own food.
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
+- PostgreSQL
+- Supabase Row Level Security
+- Vercel
 
----
+## 💻 Run locally
 
-## 🛠️ Tech Stack
+```bash
+npm install
+npm run dev
+```
 
-- **Next.js 16**
-- **React**
-- **TypeScript**
-- **Supabase**
-- **PostgreSQL**
-- **Supabase Row Level Security**
-- **Tailwind CSS**
-- **Vercel**
+Configure the required Supabase environment variables in `.env.local`.
 
----
+**Never commit secrets or private credentials to GitHub.**
 
-## 🌍 Search & Discoverability
+## 🌍 Production & discoverability
 
-FoodLoop includes production metadata, a sitemap, and robots configuration to help search engines understand the public site.
+The application includes production metadata and search-engine configuration such as a sitemap and robots configuration.
 
----
+## 🚧 Roadmap
 
-## 🧠 What I Learned
+Potential improvements include:
 
-Building FoodLoop gave me hands-on experience with:
-
-- Authentication
-- PostgreSQL databases
-- Row Level Security
-- CRUD operations
-- Real-world product design
-- Responsive UI
-- Production deployment
-- Building around an actual problem
-
----
+- Better trust and safety systems
+- Moderation workflows
+- Accessibility improvements
+- Improved location discovery
+- Notifications
+- More practical tools for local food rescue
 
 ## 👨‍💻 Creator
 
-**Koglesh R. Murugan**
+Built independently by **Koglesh R. Murugan**, a 16-year-old developer from Malaysia.
 
-Built independently as a practical project focused on solving a real-world problem.
+I built FoodLoop to turn a real-world problem into something people can actually interact with, test, and improve.
 
----
+## ⭐ Try it
 
-## 🚧 Status
+**Live:** https://food-loop-app.vercel.app/
 
-**🚀 Live Production MVP**
-
-FoodLoop is still evolving.
-
-Future improvements may include:
-
-- Trust and safety features
-- Moderation
-- Better accessibility
-- Improved location discovery
-- Notifications
-- Features that can make food rescue more practical at scale
-
----
-
-⭐ **If you like the idea, consider giving the repository a star!**
-
-🌐 **Live app:** https://food-loop-app.vercel.app/
+If you have ideas for making food rescue more useful or trustworthy, feedback is welcome.
