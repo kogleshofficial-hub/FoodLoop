@@ -1,23 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: { default: 'FoodLoop — Rescue Good Food', template: '%s | FoodLoop' },
-  description: 'FoodLoop is a global food rescue network connecting surplus food from restaurants, shops and households with people and community groups who can use it.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://food-loop-app.vercel.app'),
-  openGraph: {
-    title: 'FoodLoop — Rescue Good Food',
-    description: 'Give surplus food another chance. Share more. Waste less.',
-    type: 'website',
-    url: 'https://food-loop-app.vercel.app',
-    siteName: 'FoodLoop',
-  },
-  robots: { index: true, follow: true },
-  verification: {
-    google: 'LI6z3Avdq6RsVP2faZ6nlhcbRwvnMIdjJkrSBygvnZM',
-  },
-};
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><head><meta name="google-site-verification" content="LI6z3Avdq6RsVP2faZ6nlhcbRwvnMIdjJkrSBygvnZM" /></head><body>{children}</body></html>;
-}
+const siteUrl='https://food-loop-app.vercel.app';
+export const metadata: Metadata = { title:{default:'FoodLoop — Rescue Good Food',template:'%s | FoodLoop'}, description:'FoodLoop is a community food rescue network connecting surplus food with people who can use it.', metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||siteUrl), openGraph:{title:'FoodLoop — Rescue Good Food',description:'Give surplus food another chance. Share more. Waste less.',type:'website',url:siteUrl,siteName:'FoodLoop'}, robots:{index:true,follow:true}, verification:{google:'LI6z3Avdq6RsVP2faZ6nlhcbRwvnMIdjJkrSBygvnZM'} };
+const polish=`.heroCard{box-shadow:0 24px 70px #10110f22;transition:transform .2s,box-shadow .2s}.heroCard:hover{transform:translateY(-3px);box-shadow:0 30px 85px #10110f30}.card{transition:transform .18s,box-shadow .18s,border-color .18s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 45px #10110f12;border-color:#d3d5cd}.searchbar{position:sticky;top:10px;z-index:4}.btn{transition:transform .15s,box-shadow .15s,opacity .15s}.btn:hover:not(:disabled){box-shadow:0 8px 22px #10110f18}.menuPanel{animation:menuIn .18s ease-out}@keyframes menuIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}@media(max-width:800px){.searchbar{position:static}}`;
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en"><head><meta name="google-site-verification" content="LI6z3Avdq6RsVP2faZ6nlhcbRwvnMIdjJkrSBygvnZM"/><style dangerouslySetInnerHTML={{__html:polish}}/></head><body>{children}</body></html>}
